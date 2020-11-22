@@ -24,7 +24,7 @@ public class HomeControllerTest {
 
     @Test
     public void testHomePages() throws Exception {
-        mockMvc.perform(get("/"))
+        mockMvc.perform(get("/home"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("home"))
                 .andExpect(content().string(containsString("Welcome to home")));
